@@ -13,3 +13,10 @@
 | Design   | UI 디자인 변경                     |
 | Docs     | 문서 작업                          |
 | Chore    | 기타                               |
+
+## Version
+| Type   | Version |
+|--------|---------|
+| Node   | 20.11.0 |
+| Nginx  | 1.24.0  |
+| Go     | 1.21.6  |
