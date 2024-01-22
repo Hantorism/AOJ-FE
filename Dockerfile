@@ -4,7 +4,8 @@ COPY . .
 RUN npm install && npm run build
 
 FROM nginx:1.24.0-alpine as run
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx/nginx.conf /etc/nginx/conf.d/
 COPY --from=build /app/build /usr/share/nginx/html
-COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 CMD ["nginx", "-g", "daemon off;"]
 EXPOSE 80
