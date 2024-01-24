@@ -6,10 +6,7 @@ RUN npm install && \
 
 FROM nginx:1.24.0-alpine as run
 COPY --from=build /app/build /usr/share/nginx/html
-WORKDIR /etc/nginx/conf.d
-COPY nginx/nginx.conf .
-CMD mv nginx.conf nginx.conf.template && \
-    envsubst < nginx.conf.template > nginx.conf && \
-    rm nginx.conf.template default.conf && \
+COPY nginx/nginx.conf /etc/nginx/templates/nginx.conf.template
+CMD envsubst < /etc/nginx/templates/nginx.conf.template > /etc/nginx/conf.d/default.conf && \
     nginx -g "daemon off;"
 EXPOSE 80
