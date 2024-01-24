@@ -1,0 +1,10 @@
+../.git
+../.idea
+../build
+../node_modules
+../.gitignore
+../*.iml
+../README.md
+.dockerignore
+compose.yaml
+Dockerfile
