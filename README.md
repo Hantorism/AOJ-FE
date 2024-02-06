@@ -11,6 +11,8 @@
 | Test     | 테스트/벤치마크             |
 | Style    | 변수명/함수명 변경, 코드 포맷 변경 |
 | Design   | UI 디자인 변경            |
+| Docker   | 도커 관련 작업                   |
+| Docs     | 문서 관련 작업                   |
 | Chore    | 기타                   |
 
 ## Version
