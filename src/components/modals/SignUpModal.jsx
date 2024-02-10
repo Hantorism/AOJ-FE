@@ -5,7 +5,7 @@ const SignUpModal = ({showSignUpModal, toggleSignUpModal}) => {
     return (
         <div>
             <Modal isOpen={showSignUpModal}>
-                <ModalHeader toggle={toggleSignUpModal} className="bg-success text-white">
+                <ModalHeader toggle={toggleSignUpModal} style= {{"background-color": "#082E5D", "color":"white"}}>
                     Sign Up
                 </ModalHeader>
                 <ModalBody>
@@ -29,7 +29,7 @@ const SignUpModal = ({showSignUpModal, toggleSignUpModal}) => {
                     </Form>
                 </ModalBody>
                 <ModalFooter className="d-flex justify-content-center">
-                    <Button color="success">Sign Up</Button>
+                    <Button style= {{"background-color": "#082E5D"}}>Sign Up</Button>
                 </ModalFooter>
             </Modal>
         </div>

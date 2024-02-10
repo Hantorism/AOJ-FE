@@ -17,7 +17,7 @@ const SignInModal = ({ showSignInModal, toggleSignInModal }) => {
     return (
         <div>
         <Modal isOpen={showSignInModal}>
-            <ModalHeader className="bg-success text-white" toggle={toggleSignInModal}>
+            <ModalHeader style= {{"background-color": "#082E5D", "color": "white"}} toggle={toggleSignInModal}>
                 Sign In
             </ModalHeader>
             <ModalBody>
@@ -35,8 +35,8 @@ const SignInModal = ({ showSignInModal, toggleSignInModal }) => {
             </ModalBody>
 
             <ModalFooter className="d-flex justify-content-center">
-                <Button color="success" className="me-3"> Sign In </Button>
-                <Button onClick={toggleSignUpModal} color="primary"> Sign Up </Button>
+                <Button style= {{"background-color": "#082E5D"}} className="me-3"> Sign In </Button>
+                <Button style= {{"background-color": "#082E5D", "color": "white"}} onClick={toggleSignUpModal}> Sign Up </Button>
             </ModalFooter>
         </Modal>
         <SignUpModal showSignUpModal={showSignUpModal} toggleSignUpModal={toggleSignUpModal}></SignUpModal>

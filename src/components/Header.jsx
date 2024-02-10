@@ -22,7 +22,7 @@ const Header = () => {
           </NavItem>
         </Nav>
 
-        <Button onClick={toggleSignInModal} className="ms-auto fs-6"> Sign In </Button>
+        <Button style= {{"background-color": "white", "color": "#082E5D"}} onClick={toggleSignInModal} className="ms-auto fs-6"> Sign In </Button>
       </Navbar>
     <SignInModal showSignInModal={showSignInModal} toggleSignInModal={toggleSignInModal}></SignInModal>
     </div>
