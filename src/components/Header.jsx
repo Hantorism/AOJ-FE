@@ -10,8 +10,10 @@ const Header = () => {
 
     return (
     <div id="header">
-      <Navbar style= {{"background-color": "#082E5D"}}> 
-        <NavbarBrand className="text-white fs-6" href="/"> Home </NavbarBrand>
+      <Navbar style= {{"backgroundColor": "#082E5D"}}> 
+        <NavbarBrand className="text-white fs-6" href="/">
+          Home
+        </NavbarBrand>
         <Nav>
           <NavItem>
             <NavLink className="text-white fs-6" href="/problems"> Problems </NavLink>  
@@ -22,9 +24,9 @@ const Header = () => {
           </NavItem>
         </Nav>
 
-        <Button style= {{"background-color": "white", "color": "#082E5D"}} onClick={toggleSignInModal} className="ms-auto fs-6"> Sign In </Button>
+        <Button style= {{"backgroundColor": "white", "color": "#082E5D"}} onClick={toggleSignInModal} className="ms-auto fs-6"> Sign In </Button>
       </Navbar>
-    <SignInModal showSignInModal={showSignInModal} toggleSignInModal={toggleSignInModal}></SignInModal>
+    <SignInModal showSignInModal={showSignInModal} toggleSignInModal={toggleSignInModal}/>
     </div>
   )
 };
