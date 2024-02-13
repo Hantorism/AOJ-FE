@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form, FormGroup, Input, Label, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import CryptoJS from "crypto-js";
 
 const SignUpModal = ({showSignUpModal, toggleSignUpModal}) => {
     const [input, setInput] = useState({userName: "", email:"", password: "", passwordCheck: ""});
-
+    
     const handleSignUp = () => {
         console.log("Sign Up 버튼이 눌렸습니다.");
         toggleSignUpModal();
@@ -11,7 +12,12 @@ const SignUpModal = ({showSignUpModal, toggleSignUpModal}) => {
 
     const handleInputChange = (event) => {
         const id = event.target.id;
-        const value = event.target.value;
+        let value = event.target.value;
+
+        if (id === "password" || id === "passwordCheck") {
+            value = CryptoJS.SHA256(value).toString();
+        }
+
         setInput({
             ...input,
             [id]: value

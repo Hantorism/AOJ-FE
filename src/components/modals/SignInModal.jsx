@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form, FormGroup, Input, Label, Modal, ModalBody, ModalFooter, ModalHeader, Nav, NavItem, NavLink, Navbar, NavbarBrand } from 'reactstrap';
 import SignUpModal from './SignUpModal';
+import CryptoJS from "crypto-js";
 
 const SignInModal = ({ showSignInModal, toggleSignInModal }) => {
     const [showSignUpModal, setShowSignUpModal] = useState(false);
@@ -24,13 +25,18 @@ const SignInModal = ({ showSignInModal, toggleSignInModal }) => {
 
     const handleInputChange = (event) => {
         const id = event.target.id;
-        const value = event.target.value;
+        let value = event.target.value;
+        if (id === "password") {
+            value = CryptoJS.SHA256(value).toString();
+        }
+
         setInput({
             ...input,
             [id]: value
         });
 
         console.log(input);
+
     }
 
     return (
