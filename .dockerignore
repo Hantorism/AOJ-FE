@@ -1,8 +1,10 @@
+.dockerignore
 .git
 .gitignore
 .idea
 *.iml
-build
+Dockerfile
 README.md
-docker
+build
+compose.yaml
 node_modules
