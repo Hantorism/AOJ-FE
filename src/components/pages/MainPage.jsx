@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 const MainPage = () => {
-  const [main, setMain] = useState("Backend not working...");
+  const [isHealthy, setIsHealthy] = useState('Backend not working...');
 
-  useEffect(() => {
-    (async () => {
-      await fetch("/api/health")
-        .then((response) => response.json())
-        .then((data) => setMain(data));
-    })();
-  });
+  useEffect( () => {
+    console.log(process.env.REACT_APP_API_URL)
+    fetch(process.env.REACT_APP_API_URL + 'health')
+      .then((response) => response.json())
+      .then((data) => setIsHealthy(data));
+  }, []);
 
   return (
     <div>
-      <p>{main}</p>
+      <p>{isHealthy}</p>
     </div>
   );
 };

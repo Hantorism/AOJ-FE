@@ -29,15 +29,18 @@ services:
       - aoj-back
     build:
       context: .
+      target: dev
     image: aoj-front
     container_name: aoj-front
     environment:
       FE_PORT: "80"
       BE_HOST: "172.18.0.3"
       BE_PORT: "8080"
+    volumes:
+      - ./src:/workspace/src
     networks:
       mybridge:
         ipv4_address: 172.18.0.2
     ports:
-      - "81:80"
+      - "3000:3000"
     restart: always
