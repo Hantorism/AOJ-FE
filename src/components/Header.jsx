@@ -23,7 +23,7 @@ const Header = () => {
           </NavItem>
 
           <NavItem>
-            <NavLink className="text-white fs-5" href="/"> About </NavLink>  
+            <NavLink className="text-white fs-5" href="/about"> About </NavLink>  
           </NavItem>
         </Nav>
 
