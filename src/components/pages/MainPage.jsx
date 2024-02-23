@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from "react";
+import Context from "../contexts/Context";
+import LoadUserInfo from "../../utils/LoadUserInfo";
 
 const MainPage = () => {
   const [isHealthy, setIsHealthy] = useState('Backend not working...');
+  LoadUserInfo();
 
   useEffect( () => {
     console.log(process.env.REACT_APP_API_URL)

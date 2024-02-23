@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Button, Nav, NavItem, NavLink, Navbar, NavbarBrand } from "reactstrap";
 import SignInModal from "./modals/SignInModal";
+import Context from './contexts/Context';
 
 const Header = () => {
+    const {isSignedIn, userInfo} = useContext(Context);
     const [showSignInModal, setShowSignInModal] = useState(false);
+
     const toggleSignInModal = () => {
       setShowSignInModal(!showSignInModal);
     };
-
-    const [isSignedIn, setIsSignedIn] = useState(false);
 
     return (
     <div id="header">
@@ -25,23 +26,12 @@ const Header = () => {
             <NavLink className="text-white fs-5" href="/"> About </NavLink>  
           </NavItem>
         </Nav>
-        {/*
-        true && true => true
-        true && false => false
-        false && true => false
-        false && false => false
 
-        true || true => true
-        true || false => true
-        false || true => true
-        false || false => false
-        */}
+          {isSignedIn && <div className="text-white fs-5 align-center"> Welcome. {userInfo.nickname} </div>}
+          <Button style= {{"backgroundColor": "white", "color": "#082E5D"}} onClick={toggleSignInModal} className="ms-auto fs-6"> Sign In </Button>
 
-        {isSignedIn && <div className="text-white"> Welcome. </div>}
-        
-        <Button style= {{"backgroundColor": "white", "color": "#082E5D"}} onClick={toggleSignInModal} className="ms-auto fs-6"> Sign In </Button>
       </Navbar>
-    <SignInModal showSignInModal={showSignInModal} toggleSignInModal={toggleSignInModal} setIsSignedIn={setIsSignedIn} />
+    <SignInModal showSignInModal={showSignInModal} toggleSignInModal={toggleSignInModal}/>
     </div>
   )
 };

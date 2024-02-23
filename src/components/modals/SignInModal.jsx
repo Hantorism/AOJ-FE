@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Button, Form, FormGroup, Input, Label, Modal, ModalBody, ModalFooter, ModalHeader, Nav, NavItem, NavLink, Navbar, NavbarBrand } from 'reactstrap';
 import SignUpModal from './SignUpModal';
 import CryptoJS from "crypto-js";
+import Context from "../contexts/Context";
 
 const SignInModal = ({ showSignInModal, toggleSignInModal }) => {
+    const {setIsSignedIn} = useContext(Context);
     const [showSignUpModal, setShowSignUpModal] = useState(false);
-
     const [input, setInput] = useState({email: "", password: ""});
 
     const toggleSignUpModal = () => {
@@ -14,6 +15,10 @@ const SignInModal = ({ showSignInModal, toggleSignInModal }) => {
 
     const handleSignIn = () => {
         console.log("Sign In 버튼이 눌렸습니다.");
+        localStorage.setItem('userInfo', JSON.stringify({
+            'nickname': 'zzang12'
+        }));
+        setIsSignedIn(true);
         toggleSignInModal();
     }
 
