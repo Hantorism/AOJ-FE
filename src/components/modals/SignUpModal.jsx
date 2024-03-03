@@ -5,9 +5,27 @@ import CryptoJS from "crypto-js";
 const SignUpModal = ({showSignUpModal, toggleSignUpModal}) => {
     const [input, setInput] = useState({userName: "", email:"", password: "", passwordCheck: ""});
     
-    const handleSignUp = () => {
+    const handleSignUp = (event) => {
         console.log("Sign Up 버튼이 눌렸습니다.");
         toggleSignUpModal();
+
+        //added
+        const id = event.target.id;
+        let value = event.target.value;
+
+        setInput({
+            ...input,
+            [id]: value
+        });
+
+        if (input.password === input.passwordCheck) {
+            console.log("동일합니다.");
+        }
+        else {
+            alert("비밀번호가 일치하지 않습니다.");
+        }
+
+        // 공백검사 추가
     }
 
     const handleInputChange = (event) => {
