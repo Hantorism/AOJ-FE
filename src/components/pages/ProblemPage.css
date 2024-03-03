@@ -1,0 +1,17 @@
+.problemTitle {
+    vertical-align: center;
+    padding: 20px;
+    /* background-color: white; */
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+    margin: 20px;
+}
+
+.title {
+    font-size: larger;
+}
+
+.title_list {
+    margin: 10px;
+}
