@@ -1,11 +1,8 @@
 .problemTitle {
-    vertical-align: center;
-    padding: 20px;
-    /* background-color: white; */
-    border: 1px solid black;
+    /* vertical-align: center; */
     border-radius: 10px;
     color: black;
-    margin: 20px;
+    margin: 15px 30px 0px 30px;
 }
 
 .title {
@@ -14,4 +11,18 @@
 
 .title_list {
     margin: 10px;
+}
+
+.ProblemBtn {
+    font-size: 17px;
+}
+
+.ProblemContainer {
+    float: left;
+    padding: 40px;
+}
+
+.ProblemList {
+    padding: 0px;
+    font-size: 15px;
 }
