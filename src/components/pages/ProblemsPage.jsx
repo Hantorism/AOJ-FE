@@ -108,7 +108,7 @@ const ProblemsPage = () => {
                   C언어 중간고사 대비 그룹입니다.
                   <div className="mt-2">
                     <Button variant="outline-secondary fs-6">Join</Button>{' '}
-                    <Button variant="outline-secondary fs-6">Sign In</Button>{' '} 
+                    <Button variant="outline-secondary fs-6">Open</Button>{' '} 
                   </div>
                 </div>
                 <Badge bg="black" pill>
@@ -127,7 +127,7 @@ const ProblemsPage = () => {
                   알고리즘 관련 문제 기재합니다.
                   <div className="mt-2">
                     <Button variant="outline-secondary fs-6">Join</Button>{' '}
-                    <Button variant="outline-secondary fs-6">Sign In</Button>{' '} 
+                    <Button variant="outline-secondary fs-6">Open</Button>{' '} 
                   </div>
                 </div>
 
@@ -145,7 +145,7 @@ const ProblemsPage = () => {
                   JAVA 기초 그룹입니다.
                   <div className="mt-2">
                     <Button variant="outline-secondary fs-6">Join</Button>{' '}
-                    <Button variant="outline-secondary fs-6">Sign In</Button>{' '} 
+                    <Button variant="outline-secondary fs-6">Open</Button>{' '} 
                   </div>
                 </div>
                 <Badge bg="black" pill>
