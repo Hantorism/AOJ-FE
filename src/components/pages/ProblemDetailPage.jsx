@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import LoadUserInfo from "../../utils/LoadUserInfo";
 import "./ProblemDetailPage.css";
-import { Nav, NavItem, NavLink } from 'react-bootstrap';
-import Table from 'react-bootstrap/Table';
 
 const ProblemDetailPage = () => {
   LoadUserInfo();
+  alert("hi");
     return (
-    <div>
-      asd
+    <div class="pdp">
+      <div>
+        <nav>
+            <div>nav</div>
+        </nav>
+      </div>
     </div>
-    
   );
 };
 

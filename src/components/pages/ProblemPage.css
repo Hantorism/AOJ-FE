@@ -26,3 +26,25 @@
     padding: 0px;
     font-size: 15px;
 }
+
+#container_title {
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.problem_container {
+    margin-bottom: 20px;
+}
+
+#nav-profile {
+    float: left;
+    position: absolute;
+    margin: 20px;
+}
+
+#nav-contact {
+    float: left;
+    position: absolute;
+    margin: 20px;
+}
