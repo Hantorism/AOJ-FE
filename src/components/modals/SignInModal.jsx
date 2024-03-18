@@ -16,7 +16,7 @@ const SignInModal = ({ showSignInModal, toggleSignInModal }) => {
     const handleSignIn = () => {
         console.log("Sign In 버튼이 눌렸습니다.");
         localStorage.setItem('userInfo', JSON.stringify({
-            'nickname': 'zzang12'
+            'nickname': 'user01'
         }));
         setIsSignedIn(true);
         toggleSignInModal();
