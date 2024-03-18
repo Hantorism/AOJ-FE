@@ -15,7 +15,7 @@ const Header = () => {
     <div id="header">
       <Navbar style= {{"backgroundColor": "#082E5D"}}> 
         <NavbarBrand className="text-white fs-5" href="/">
-          Home
+          Ajou Online Judge
         </NavbarBrand>
         <Nav>
           <NavItem>
@@ -27,7 +27,8 @@ const Header = () => {
           </NavItem>
         </Nav>
 
-          {isSignedIn && <div className="text-white fs-5 align-center"> Welcome. {userInfo.nickname} </div>}
+          {/* {isSignedIn && <div className="text-white fs-5 align-center">Welcome. {userInfo.nickname} </div>} */}
+
           <Button style= {{"backgroundColor": "white", "color": "#082E5D"}} onClick={toggleSignInModal} className="ms-auto fs-6"> Sign In </Button>
 
       </Navbar>
