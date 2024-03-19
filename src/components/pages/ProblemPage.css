@@ -66,3 +66,7 @@ body {
     position: absolute;
     margin: 20px;
 }
+
+.prob_container {
+    width: 1000px;
+}

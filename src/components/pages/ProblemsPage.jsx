@@ -56,13 +56,13 @@ const ProblemsPage = () => {
             <ListGroup as="ol" numbered>
               <ListGroup.Item
                 as="li"
-                className="d-flex align-items-start p-3"
-                class="prob_list">
+                className="d-flex align-items-start p-3 prob_container"
+                >
                 <div className="ms-2 me-auto">
                   <div className="fw-bold">Subheading</div>
                   그리디 알고리즘
                 </div>
-                <Badge bg="primary" pill>
+                <Badge className="fs-6" bg="primary" pill>
                   5
                 </Badge>
               </ListGroup.Item>
@@ -70,14 +70,14 @@ const ProblemsPage = () => {
               <ListGroup.Item
                 as="li"
                 className="d-flex align-items-start p-3"
-                class="prob_list">
+                >
                 <div className="ms-2 me-auto">
                   <div className="fw-bold">
                     동적 프로그래밍
                   </div>
                   DP 관련 문제풀이 모음입니다.
                 </div>
-                <Badge bg="primary" pill>
+                <Badge className="fs-6" bg="primary" pill>
                   10
                 </Badge>
               </ListGroup.Item>
@@ -85,12 +85,12 @@ const ProblemsPage = () => {
               <ListGroup.Item
                 as="li"
               className="d-flex align-items-start p-3"
-              class="prob_list">
+              >
                 <div className="ms-2 me-auto">
                   <div className="fw-bold">자료구조</div>
                   자료구조 관련 문제풀이 모음입니다.
                 </div>
-                <Badge bg="primary" pill>
+                <Badge className="fs-6" bg="primary" pill>
                   14
                 </Badge>
               </ListGroup.Item>
@@ -101,9 +101,9 @@ const ProblemsPage = () => {
           <ListGroup as="ol" numbered>
               <ListGroup.Item
                 as="li"
-                className="d-flex align-items-start p-3"
-                class="prob_list">
-                <div className="ms-2 me-auto">
+                className="d-flex align-items-start p-3 prob_container"
+                >
+                <div className="ms-2 me-auto pr-60">
                   <div className="fw-bold"> c언어 기초 </div>
                   C언어 중간고사 대비 그룹입니다.
                   <div className="mt-2">
@@ -111,15 +111,15 @@ const ProblemsPage = () => {
                     <Button variant="outline-secondary fs-6">Open</Button>{' '} 
                   </div>
                 </div>
-                <Badge bg="black" pill>
+                <Badge className="fs-6" pill>
                   35 People
                 </Badge>
               </ListGroup.Item>
 
               <ListGroup.Item
                 as="li"
-                className="d-flex align-items-start p-3"
-                class="prob_list">
+                className="d-flex align-items-start p-3 prob_container"
+                >
                 <div className="ms-2 me-auto">
                   <div className="fw-bold">
                     컴퓨터 구조 중간고사 대비
@@ -131,7 +131,7 @@ const ProblemsPage = () => {
                   </div>
                 </div>
 
-                <Badge bg="black" pill>
+                <Badge className="fs-6" pill>
                   10 People <br></br>
                 </Badge>
               </ListGroup.Item>
@@ -139,7 +139,7 @@ const ProblemsPage = () => {
               <ListGroup.Item
                 as="li"
               className="d-flex align-items-start p-3"
-              class="prob_list">
+              >
                 <div className="ms-2 me-auto">
                   <div className="fw-bold">JAVA 기초 그룹</div>
                   JAVA 기초 그룹입니다.
@@ -148,7 +148,7 @@ const ProblemsPage = () => {
                     <Button variant="outline-secondary fs-6">Open</Button>{' '} 
                   </div>
                 </div>
-                <Badge bg="black" pill>
+                <Badge className="fs-6" pill>
                   14 People
                 </Badge>
               </ListGroup.Item>
