@@ -1,17 +1,25 @@
 import React, { useState } from "react";
+import styled, { createGlobalStyle } from "styled-components";
 import LoadUserInfo from "../../utils/LoadUserInfo";
-import "./ProblemDetailPage.css";
+
+const GlobalStyles = createGlobalStyle`
+  body {
+    color: black;
+  }
+`;
+
+const PdpContainer = styled.div`
+  color: black;
+`;
 
 const ProblemDetailPage = () => {
   LoadUserInfo();
   alert("hi");
-    return (
-    <div class="pdp">
-      <div>
-        <nav>
-            <div>nav</div>
-        </nav>
-      </div>
+  return (
+    <div>
+      <nav>
+          <div>nav</div>
+      </nav>
     </div>
   );
 };
